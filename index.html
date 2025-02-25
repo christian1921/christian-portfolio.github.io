@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Christian Santos | Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script> <!-- Add Typed.js for typing effect -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    
+</head>
+<body class="bg-gray-800 text-white">
+
+   <!-- Navigation Bar -->
+<header class="bg-gray-900 p-4 fixed w-full top-0 shadow-lg z-50">
+    <nav class="container mx-auto flex justify-between items-center">
+        <a href="#" class="text-white text-3xl font-semibold">Portfolio</a>
+
+        <!-- Mobile Menu Button -->
+        <button id="menu-btn" class="md:hidden text-white text-3xl focus:outline-none">
+            ☰
+        </button>
+
+        <!-- Navigation Links -->
+        <ul id="menu" class="hidden md:flex text-lg space-x-6 md:space-x-8">
+            <li><a href="#home" class="text-white nav-link hover:text-blue-500">Home</a></li>
+            <li><a href="#about" class="text-white nav-link hover:text-blue-500">About</a></li>
+            <li><a href="#skills" class="text-white nav-link hover:text-blue-500">Skills</a></li>
+            <li><a href="#projects" class="text-white nav-link hover:text-blue-500">Projects</a></li>
+            <li><a href="#contact" class="text-white nav-link hover:text-blue-500">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Mobile Menu (Hidden by Default) -->
+    <ul id="mobile-menu" class="hidden flex flex-col bg-gray-800 text-center text-lg space-y-4 p-4 md:hidden">
+        <li><a href="#home" class="text-white hover:text-blue-500">Home</a></li>
+        <li><a href="#about" class="text-white hover:text-blue-500">About</a></li>
+        <li><a href="#skills" class="text-white hover:text-blue-500">Skills</a></li>
+        <li><a href="#projects" class="text-white hover:text-blue-500">Projects</a></li>
+        <li><a href="#contact" class="text-white hover:text-blue-500">Contact</a></li>
+    </ul>
+</header>
+
+<!-- Home Section -->
+<section id="home" class="flex flex-col md:flex-row items-center justify-center text-center md:text-left py-36 bg-gray-900 mt-16">
+    <!-- Text Content -->
+    <div class="w-full md:w-1/2 px-6 ml-8">
+        <h1 class="text-4xl md:text-8xl font-bold text-blue-600 mb-4">Hello, It's Me</h1>
+        <h2 class="text-3xl md:text-6xl font-semibold text-white mb-4">Christian Santos</h2>
+        <p id="typing-effect" class="text-xl md:text-5xl text-white mb-6 inline-block"></p> <!-- Typing effect -->
+    
+        <!-- Social Media Links -->
+        <div class="flex flex-wrap justify-center md:justify-start space-x-4 text-xl text-white mb-6">
+            <a href="https://discord.gg/W5SwbEpyuQ" target="_blank" class="hover:text-blue-500 flex items-center justify-center w-12 h-12 rounded-full border-2 border-blue-500">
+                <i class="fab fa-discord text-2xl"></i>
+            </a>
+            <a href="https://www.whatsapp.com" target="_blank" class="hover:text-green-500 flex items-center justify-center w-12 h-12 rounded-full border-2 border-green-500">
+                <i class="fab fa-whatsapp text-2xl"></i>
+            </a>
+            <a href="https://github.com/christian1921" target="_blank" class="hover:text-gray-500 flex items-center justify-center w-12 h-12 rounded-full border-2 border-gray-500">
+                <i class="fab fa-github text-2xl"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/christian-santos-66bb15319/" target="_blank" class="hover:text-blue-700 flex items-center justify-center w-12 h-12 rounded-full border-2 border-blue-700">
+                <i class="fab fa-linkedin text-2xl"></i>
+            </a>
+        </div>
+        
+        <style>
+            /* You can customize the border color and icon size to your liking */
+            a i {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+        </style>
+        
+        
+    
+        <!-- Download CV Button -->
+        <div class="mt-6">
+            <a href="pics/Christian Santos cv-1.pdf" download class="bg-blue-600 text-white py-2 px-6 rounded-lg hover:bg-blue-700 transition-all">
+                Download CV
+            </a>
+        </div>
+    </div>
+    
+    <!-- Profile Picture -->
+    <div class="w-full md:w-1/2 flex justify-center ml-4">
+        <img id="profile-img" src="pics/christianpic.jpg" alt="Christian Santos" class="w-48 md:w-72 rounded-xl object-cover border-4 floating-img">
+    </div>
+    
+    <style>
+        @keyframes float {
+            0% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-10px);
+            }
+            100% {
+                transform: translateY(0);
+            }
+        }
+    
+        .floating-img {
+            animation: float 3s ease-in-out infinite;
+        }
+    </style>
+    
+    
+</section>
+
+<!-- Scripts -->
+<script>
+    // Mobile Menu Toggle
+    document.getElementById("menu-btn").addEventListener("click", function() {
+        let mobileMenu = document.getElementById("mobile-menu");
+        mobileMenu.classList.toggle("hidden");
+    });
+
+    // Typing Effect
+    const options = {
+        strings: ["I am a Graduate of Information Technology", "And I am a Web Developer"],
+        typeSpeed: 100,
+        backSpeed: 50,
+        backDelay: 1000,
+        startDelay: 500,
+        loop: true,
+    };
+    const typed = new Typed("#typing-effect", options);
+</script>
+
+
+   <!-- About Section -->
+   <section id="about" class="py-52 bg-gray-900 text-left">
+       <div class="container mx-auto flex items-center justify-between">
+           <!-- Text Content (Left-aligned) -->
+           <div class="w-full md:w-1/2">
+               <h2 class="text-6xl font-bold text-blue-600 mb-4">About Me</h2>
+               <p class="text-2xl mb-4">Hi, I'm Christian Santos, a passionate IT professional with experience in computer hardware, software development, and web design. I hold a Bachelor's degree in Information Technology from Don Honorio Ventura State University and have experience working with MySQL, C++, HTML, and IoT.</p>
+               <p class="text-lg">I am actively seeking opportunities to grow and contribute to innovative projects. Feel free to explore my skills and projects below!</p>
+           </div>
+   
+           <!-- Profile Picture (Right-aligned) -->
+           <div class="w-full md:w-1/2 flex justify-center relative">
+            <div class="bg-white shadow-xl rounded-2xl p-4 border border-gray-200 relative">
+                <img id="profile-img1" src="pics/card.jpg" alt="Christian Santos" class="w-72 h-72 mx-auto rounded-xl object-cover border-4 border-cyan-600">
+                <h3 class="text-center text-lg font-semibold mt-4 text-gray-900">Christian Santos</h3>
+        
+                <!-- Left Button -->
+                <button id="prev-btn" class="absolute left-0 top-1/2 transform -translate-y-1/2 text-black py-2 rounded-full">
+                    &#8592;
+                </button>
+        
+                <!-- Right Button -->
+                <button id="next-btn" class="absolute right-0 top-1/2 transform -translate-y-1/2 text-black py-2 rounded-full">
+                    &#8594;
+                </button>
+            </div>
+        </div>
+        
+        <script>
+            const images2 = ['pics/card.jpg', 'pics/web.jpg', 'pics/software.jpg'];
+            let index = 0;
+        
+            document.getElementById('prev-btn').addEventListener('click', () => {
+                index = (index === 0) ? images2.length - 1 : index - 1;
+                document.getElementById('profile-img1').src = images2[index];
+            });
+        
+            document.getElementById('next-btn').addEventListener('click', () => {
+                index = (index === images2.length - 1) ? 0 : index + 1;
+                document.getElementById('profile-img1').src = images2[index];
+            });
+        </script>
+        
+        
+       </div>
+   </section>
+
+   <!-- JavaScript for alternating images every 5 seconds -->
+   <script>
+       let imageIndex = 0;
+       const images = ['pics/christianpic.jpg', 'pics/tian.jpg', 'pics/chrispic.jpg', 'pics/tiaan.jpg'];
+
+       function changeImage() {
+           const img = document.getElementById('profile-img');
+           img.src = images[imageIndex];
+           imageIndex = (imageIndex + 1) % images.length; // Cycle through the images
+       }
+
+       // Set the image to change every 4 seconds
+       setInterval(changeImage, 4000);
+   </script>
+   
+</body>
+</html>
+
+    
+
+    <!-- Skills Section -->
+    <section id="skills" class="py-16 bg-gray-700">
+        <div class="container mx-auto text-center">
+            <h2 class="text-3xl font-bold text-blue-600 mb-4">Skills</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Skill Box 1 -->
+                <div class="skill-box-container">
+                    <div id="skill-box-1" class="skill-box">
+                        <div class="face front">Python (Django)</div>
+                        <div class="face back">C++</div>
+                        <div class="face left">MySQL</div>
+                        <div class="face right">HTML/CSS</div>
+                        <div class="face top">Programming</div>
+                        <div class="face bottom">Skills</div>
+                    </div>
+                </div>
+                <!-- Skill Box 2 -->
+                <div class="skill-box-container">
+                    <div id="skill-box-2" class="skill-box">
+                        <div class="face front">Frontend (HTML, CSS, Tailwind)</div>
+                        <div class="face back">Backend (Django)</div>
+                        <div class="face left">Responsive Design</div>
+                        <div class="face right">Web Optimization</div>
+                        <div class="face top">Web Development</div>
+                        <div class="face bottom">Skills</div>
+                    </div>
+                </div>
+                <!-- Skill Box 3 -->
+                <div class="skill-box-container">
+                    <div id="skill-box-3" class="skill-box">
+                        <div class="face front">Arduino Uno</div>
+                        <div class="face back">Sensor Integration</div>
+                        <div class="face left">Embedded Systems</div>
+                        <div class="face right">IoT</div>
+                        <div class="face top">IoT</div>
+                        <div class="face bottom">Skills</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="controls text-center mt-4">
+            <button class="control-btn" id="rotate-left">Left</button>
+            <button class="control-btn" id="rotate-right">Right</button>
+            <button class="control-btn" id="rotate-up">Up</button>
+            <button class="control-btn" id="rotate-down">Down</button>
+        </div>
+    </section>
+    
+    <style>
+        .skill-box-container {
+            perspective: 1200px;
+            margin: 0 auto;
+        }
+    
+        .skill-box {
+            width: 200px;
+            height: 200px;
+            position: relative;
+            transform-style: preserve-3d;
+            background-color: #1E3A8A; /* Dark Blue background color */
+            transition: transform 0.5s ease; /* Smooth transition for manual rotation */
+        }
+    
+        .face {
+            position: absolute;
+            width: 200px;
+            height: 200px;
+            color: white;
+            font-size: 16px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            font-weight: bold;
+            border: 2px solid #555;
+            padding: 10px;
+            background-color: #2C5282; /* Dark Blue color for all faces */
+            transform-origin: center;
+        }
+    
+        /* Adjust the text to always stay upright */
+        .front  { transform: translateZ(100px) rotate(0deg); }
+        .back   { transform: rotateY(180deg) translateZ(100px) rotate(0deg); }
+        .left   { transform: rotateY(-90deg) translateZ(100px) rotate(0deg); }
+        .right  { transform: rotateY(90deg) translateZ(100px) rotate(0deg); }
+        .top    { transform: rotateX(90deg) translateZ(100px) rotate(0deg); }
+        .bottom { transform: rotateX(-90deg) translateZ(100px) rotate(0deg); }
+    
+        /* Button Styles */
+        .controls {
+            margin-top: 20px;
+        }
+    
+        .control-btn {
+            padding: 10px 20px;
+            background-color: #3182ce;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            margin: 5px;
+            cursor: pointer;
+        }
+    
+        .control-btn:hover {
+            background-color: #63b3ed;
+        }
+    </style>
+    
+    <script>
+        let rotationX = 0;
+        let rotationY = 0;
+    
+        // Function to rotate the box based on user clicks
+        function rotateBox() {
+            const boxes = document.querySelectorAll('.skill-box');
+            boxes.forEach(box => {
+                box.style.transform = `rotateX(${rotationX}deg) rotateY(${rotationY}deg)`;
+            });
+        }
+    
+        // Event listeners for the buttons
+        document.getElementById('rotate-left').addEventListener('click', () => {
+            rotationY -= 90;  // Rotate left 90 degrees around Y axis
+            rotateBox();
+        });
+    
+        document.getElementById('rotate-right').addEventListener('click', () => {
+            rotationY += 90;  // Rotate right 90 degrees around Y axis
+            rotateBox();
+        });
+    
+        document.getElementById('rotate-up').addEventListener('click', () => {
+            rotationX -= 90;  // Rotate up 90 degrees around X axis
+            rotateBox();
+        });
+    
+        document.getElementById('rotate-down').addEventListener('click', () => {
+            rotationX += 90;  // Rotate down 90 degrees around X axis
+            rotateBox();
+        });
+    </script>
+    
+    <!-- Add RGB shadows to each face of the skill boxes using JavaScript -->    
+    
+    
+    
+    <script>
+        function applyRgbShadow(id) {
+            let colors = ['red', 'green', 'blue'];
+            let box = document.getElementById(id);
+            
+            let faces = box.querySelectorAll('.face'); // Get all faces (front, back, left, etc.)
+            let i = 0;
+            
+            setInterval(function() {
+                faces.forEach(face => {
+                    // Applying RGB shadow to each face with different intensities and colors
+                    face.style.boxShadow = `0 0 15px ${colors[i]}, 0 0 25px ${colors[i]}, 0 0 35px ${colors[i]}`;
+                });
+                i = (i + 1) % colors.length; // Cycle through red, green, blue
+            }, 1000); // Change shadow every 1 second
+        }
+        
+        // Apply RGB shadow to each box
+        applyRgbShadow('skill-box-1');
+        applyRgbShadow('skill-box-2');
+        applyRgbShadow('skill-box-3');
+    </script>
+    
+    
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-16 bg-gray-900">
+        <div class="container mx-auto text-center">
+            <h2 class="text-3xl font-bold text-blue-600 mb-4">Projects</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Project Box 1 -->
+                <div id="project-box-1" class="bg-gray-800 p-6 rounded-lg shadow-xl transition-all duration-300 relative">
+                    <div id="project-content-1">
+                        <h3 class="text-2xl font-semibold mb-2">Project 1: Web App</h3>
+                        <p class="text-lg mb-4">A web application built using Django and Tailwind CSS for a smooth user interface.</p>
+                        <a href="#projects" class="text-blue-600 cursor-pointer" onclick="showProjectImages(1)">View Project</a>
+                    </div>
+                </div>
+    
+                <!-- Project Box 2 -->
+                <div id="project-box-2" class="bg-gray-800 p-6 rounded-lg shadow-xl transition-all duration-300 relative">
+                    <div id="project-content-2">
+                        <h3 class="text-2xl font-semibold mb-2">Project 2: IoT Sensor</h3>
+                        <p class="text-lg mb-4">An IoT project using Arduino Uno to integrate sensors for environmental monitoring.</p>
+                        <a href="#projects" class="text-blue-600 cursor-pointer" onclick="showProjectImages(2)">View Project</a>
+                    </div>
+                </div>
+    
+                <!-- Project Box 3 -->
+                <div id="project-box-3" class="bg-gray-800 p-6 rounded-lg shadow-xl transition-all duration-300 relative">
+                    <div id="project-content-3">
+                        <h3 class="text-2xl font-semibold mb-2">Project 3: Portfolio</h3>
+                        <p class="text-lg mb-4">This portfolio is built with HTML, Tailwind CSS, and a focus on responsive design.</p>
+                        <a href="#projects" class="text-blue-600 cursor-pointer" onclick="showProjectImages(3)">View Project</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <script>
+        let images3 = [
+            "pics/project.png", "pics/project1.png", "pics/project2.png", "pics/project3.png", "pics/project4.png",
+            "pics/project5.png", "pics/project6.png", "pics/project7.png", "pics/project8.png", "pics/project9.png"
+        ];
+    
+        let currentIndex = { 1: 1, 2: 1, 3: 1 };
+    
+        function showProjectImages(projectId) {
+            let projectBox = document.getElementById(`project-box-${projectId}`);
+            let projectContent = document.getElementById(`project-content-${projectId}`);
+    
+            // Change border color to indicate active selection
+            document.querySelectorAll('.bg-gray-800').forEach(box => {
+                box.style.border = "none";
+            });
+            projectBox.style.border = "2px solid blue";
+    
+            // Replace content with image viewer
+            projectContent.innerHTML = `
+                <img id="project-image-${projectId}" src="pics/${images3[1]}" class="w-full h-auto rounded mb-2" alt="Project Image">
+                <div class="flex justify-between">
+                    <button onclick="prevImage(${projectId})" class="bg-gray-700 text-white px-3 py-2 rounded cursor-pointer">&#9664; Prev</button>
+                    <button onclick="nextImage(${projectId})" class="bg-gray-700 text-white px-3 py-2 rounded cursor-pointer">Next &#9654;</button>
+                </div>
+            `;
+        }
+    
+        function prevImage(projectId) {
+    currentIndex[projectId] = (currentIndex[projectId] === 1) ? images3.length - 1 : currentIndex[projectId] - 1;
+    document.getElementById(`project-image-${projectId}`).src = images3[currentIndex[projectId]];
+}
+
+function nextImage(projectId) {
+    currentIndex[projectId] = (currentIndex[projectId] === images3.length - 1) ? 0 : currentIndex[projectId] + 1;
+    document.getElementById(`project-image-${projectId}`).src = images3[currentIndex[projectId]];
+}
+
+    </script>
+    
+    
+    <script>
+        function applyRgbShadow(id) {
+            let colors = ['gray', 'darkgray', 'white'];
+            let box = document.getElementById(id);
+            let i = 0;
+            setInterval(function() {
+                box.style.boxShadow = `0 0 15px ${colors[i]}, 0 0 25px ${colors[i]}, 0 0 35px ${colors[i]}`;
+                i = (i + 1) % colors.length; // Cycle through red, green, blue
+            }, 1000); // Change shadow every 1 second
+        }
+    
+        // Apply RGB shadow to each project box
+        applyRgbShadow('project-box-1');
+        applyRgbShadow('project-box-2');
+        applyRgbShadow('project-box-3');
+    </script>
+    
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-16 bg-gray-700">
+        <div class="container mx-auto text-center">
+            <h2 class="text-3xl font-bold text-blue-600 mb-4">Contact</h2>
+            <p class="text-lg mb-4">Feel free to reach out to me through the contact form below or via email!</p>
+            <form action="#" method="post" class="max-w-lg mx-auto bg-white p-8 rounded-lg shadow-lg">
+                <input type="text" name="name" placeholder="Your Name" class="w-full p-4 mb-4 border border-gray-300 rounded" required>
+                <input type="email" name="email" placeholder="Your Email" class="w-full p-4 mb-4 border border-gray-300 rounded" required>
+                <textarea name="message" placeholder="Your Message" class="w-full p-4 mb-4 border border-gray-300 rounded" required></textarea>
+                <button type="submit" class="w-full bg-blue-600 text-white p-4 rounded-lg hover:bg-blue-700">Send Message</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark-blue-600 text-white py-4 text-center">
+        <p>&copy; 2025 Christian Santos. All Rights Reserved.</p>
+    </footer>
+
+</body>
+</html>
